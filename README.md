@@ -16,6 +16,22 @@ The app uses [Glide](https://github.com/bumptech/glide) for fetching the avatar.
 
 The app uses [Retrofit](https://github.com/square/retrofit) for calling the endpoints.
 
+## User Interfaces
+
+This part presents the different interfaces that the app takes when requesting the Github API. All the following interfaces belong to the same Fragment.
+
+The Loading screen until the first page is brought.
+
+<img width="200" height="400" alt="loading frame" src="https://github.com/larhlimiHamza/UnitedRemoteMobileChallenge/blob/master/loading_frame.jpg">
+
+The next screen shows the repo fetched in a single row for each repo.
+
+<img width="200" height="400" alt="loading frame" src="https://github.com/larhlimiHamza/UnitedRemoteMobileChallenge/blob/master/fetching_data.jpg">
+
+The last screen is the bonus part, once all the rows corresponding to the first page, the app calls another endpoint in order to display another data page without refreshing the fragment.
+
+<img width="200" height="400" alt="loading frame" src="https://github.com/larhlimiHamza/UnitedRemoteMobileChallenge/blob/master/scroll_loading_data.jpg">
+
 ## Contact
 
 Contact me on larhlimihamza@gmail.com
