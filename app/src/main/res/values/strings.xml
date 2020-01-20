@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">UnitedRemoteMobileChallenge</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">GithubStarredRepos</string>
+    <string name="title_navigation">Trending Repos</string>
+    <string name="settings">settings</string>
+    <string name="starred">Starred</string>
+    <string name="trending">Trending</string>
 </resources>
