@@ -24,7 +24,7 @@ import java.util.LinkedList;
 public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.MyViewAdapter> {
 
     private LinkedList<Repo> mRepos;
-    private static final String mTAG ="RepoAdapter";
+    private static final String TAG ="RepoAdapter";
     Context mContext;
 
     public RepoAdapter(LinkedList<Repo> mRepos, Context mContext) {
@@ -36,7 +36,7 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.MyViewAdapter>
     public MyViewAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //Create a new view ( item_repo file )
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R  .layout.item_repo, parent, false);
+                .inflate(R.layout.item_repo, parent, false);
         return new MyViewAdapter(v, mContext);
     }
 
@@ -47,7 +47,7 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.MyViewAdapter>
         holder.repoDescription.setText(mRepos.get(position).getDescription());
         holder.ownerName.setText(mRepos.get(position).getOwner().getLogin());
         //TODO Load the avatar
-        holder.repoStarsNumber.setText(new DecimalFormat("#0.00").format(mRepos.get(position).getStargazersCount()).concat("K"));
+        holder.repoStarsNumber.setText( StarsConverter.convert( mRepos.get(position).getStargazersCount() ) );
 
         //onClickListener
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {

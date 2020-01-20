@@ -1,5 +1,4 @@
 package android.unitedremote.com.unitedremotemobilechallenge.fragments;
-
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -9,12 +8,13 @@ import android.unitedremote.com.unitedremotemobilechallenge.R;
 import android.unitedremote.com.unitedremotemobilechallenge.models.Owner;
 import android.unitedremote.com.unitedremotemobilechallenge.models.Repo;
 import android.unitedremote.com.unitedremotemobilechallenge.util.RepoAdapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.LinkedList;
-
+import java.util.List;
 
 
 public class StarredReposFragment extends Fragment {
@@ -22,6 +22,8 @@ public class StarredReposFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
     private RepoAdapter mRepoAdapter;
+    private static final String TAG ="StarredReposFragment";
+
 
     LinkedList<Repo> mRepo = new LinkedList<>();
 
@@ -47,10 +49,11 @@ public class StarredReposFragment extends Fragment {
                             "owner"+i,
                             "avatar_url"+i
                     ),
-                    i
+                    i*300+1000
             ));
         }
         mRepoAdapter.notifyDataSetChanged();
+
 
         return view;
     }
