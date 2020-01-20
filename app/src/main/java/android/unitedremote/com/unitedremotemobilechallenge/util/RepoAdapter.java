@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
@@ -46,7 +48,7 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.MyViewAdapter>
         holder.repoName.setText(mRepos.get(position).getName());
         holder.repoDescription.setText(mRepos.get(position).getDescription());
         holder.ownerName.setText(mRepos.get(position).getOwner().getLogin());
-        //TODO Load the avatar
+        Glide.with(mContext).load(mRepos.get(position).getOwner().getAvatarUrl()).into(holder.ownerAvatar);
         holder.repoStarsNumber.setText( StarsConverter.convert( mRepos.get(position).getStargazersCount() ) );
 
         //onClickListener

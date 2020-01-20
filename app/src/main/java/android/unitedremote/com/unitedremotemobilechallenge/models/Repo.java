@@ -1,5 +1,4 @@
 package android.unitedremote.com.unitedremotemobilechallenge.models;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -16,6 +15,8 @@ public class Repo {
     @SerializedName("stargazers_count")
     @Expose
     private Integer stargazersCount;
+
+
 
     public String getName() {
         return name;
